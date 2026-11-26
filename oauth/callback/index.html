@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>Returning to ClickNPadz</title>
+<style>
+  body { font: 17px/1.4 -apple-system, system-ui, sans-serif; text-align: center; padding: 3em 1em; color: #222; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #eee; background: #111; } a { color: #6af; } }
+  a { font-weight: 600; }
+</style>
+</head>
+<body>
+<h1>Returning to ClickNPadz</h1>
+<p><a id="open" href="clickpad://oauth/callback">Open ClickNPadz</a></p>
+<p>If nothing happens, return to the app.</p>
+<script>
+  // Hand the Planning Center reply (code and state) back to the app. Nothing is logged or shown.
+  var target = 'clickpad://oauth/callback' + location.search;
+  document.getElementById('open').href = target;
+  location.replace(target);
+</script>
+</body>
+</html>
